@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 1rem;
+  background-color: black;
+}
+
+.display {
+  width: 100%;
+  height: 10rem;
+  padding: .5rem 2rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-break: break-all;
+}
+
+.keypad {
+  display: grid;
+  gap: .8rem;
+  grid-template-columns: repeat(4, 4rem);
+  grid-template-rows: repeat(5, 4rem);
+  grid-template-areas: 
+            "Reset Plus-minus Percent Dev"
+            "Digit7 Digit8 Digit9 Mult"
+            "Digit4 Digit5 Digit6 Minus"
+            "Digit1 Digit2 Digit3 Plus"
+            "Digit0 Digit0 Dicimal-point Evaluate";
+}
+
+$areas: Reset, Plus-minus, Percent, Dicimal-point, Evaluate, Dev, Mult, Minus, Plus, Digit0, Digit1, Digit2, Digit3, Digit4, Digit5, Digit6, Digit7, Digit8, Digit9;
+
+@each $area in $areas {
+  ##{$area} {
+    grid-area: ($area);
+  }
+}
+
+button {
+  border-radius: 90rem;
+  border: none;
+  font-size: 1.2rem;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .App{
+    width: 23rem;
+    height: 40rem;
+  }
+}
