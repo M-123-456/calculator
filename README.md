@@ -1,7 +1,20 @@
-## Purpose of this project
-This was an assignment of my coding school.
+## React Calculator App:
 
-## What is this project about?
-This is a calculator app.
+#### 1. Install the project
+    `npm install`
 
-Link: https://calculator-five-theta.vercel.app/
+#### 2. Start the project with following command (start from your project root)
+    `npm start`
+
+#### 3. Purpose of this project
+    It was an assignment of my coding school.
+
+#### 4. What this project is about
+    This is a calculator app which immitates the calculator app of cell phones.
+
+#### 5. This project includes:
+    Doc:
+    - [tailwind](https://tailwindcss.com/docs/guides/create-react-app)
+
+#### 6. Deploy
+    https://calculator-five-theta.vercel.app/
